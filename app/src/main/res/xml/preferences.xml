@@ -2,7 +2,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <android.support.v7.preference.SwitchPreferenceCompat
+    <android.preference.SwitchPreference
         android:defaultValue="false"
         android:key="shake_key"
         android:summary="Turn this option on or off"
@@ -17,5 +17,4 @@
         android:title="@string/pref_title_sleep_timer"
         android:defaultValue="-1"
         android:summary="None"/>
-
 </PreferenceScreen>

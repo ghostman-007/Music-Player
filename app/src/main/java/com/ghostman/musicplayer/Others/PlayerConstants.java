@@ -39,6 +39,7 @@ public class PlayerConstants {
     public static boolean SHUFFLE = false;
 
     public static int SLEEP_TIMER = -1;
+    public static boolean SLEEP = false;
 
     // Definition in PlayerService.class
     public static Handler PLAY_HANDLER;

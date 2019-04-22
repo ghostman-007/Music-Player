@@ -26,6 +26,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.graphics.Palette;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -205,8 +206,8 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_about) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("☻☻☻ ABOUT ☻☻☻");
-            builder.setMessage("\nDesigned & Programmed by Ghostman™ " + "\n\nBlog : shivam-blog.blogspot.com");
+            builder.setTitle("☻☻☻ Music Player v1.0 ☻☻☻");
+            builder.setMessage(Html.fromHtml("<b>■ Developers</b><br><br>Shubham <br>Sunny <br>Vinjit <br>Piyush <br>Shivam"));
             builder.setCancelable(false);
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override

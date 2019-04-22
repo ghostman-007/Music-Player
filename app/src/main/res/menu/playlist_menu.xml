@@ -5,5 +5,6 @@
     <item android:id="@+id/playlistAdd"
         app:showAsAction="ifRoom"
         android:title="Add Playlist"
+        android:iconTint="@color/colorWhite"
         android:icon="@drawable/ic_add_24px" />
 </menu>

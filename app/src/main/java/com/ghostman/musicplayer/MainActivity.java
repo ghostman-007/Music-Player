@@ -165,45 +165,35 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         if (id == R.id.nav_songs) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.main_frame,new FragmentSongs(),"FRAGMENT_SONGS");
-            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Music");
 
         } else if (id == R.id.nav_albums) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.main_frame,new FragmentAlbums(),"FRAGMENT_ALBUMS");
-            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Albums");
 
         } else if (id == R.id.nav_artist) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.main_frame,new FragmentArtist(),"FRAGMENT_ARTIST");
-            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Artist");
 
         } else if (id == R.id.nav_genre) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.main_frame,new FragmentGenres(),"FRAGMENT_GENRES");
-            fragmentTransaction.commit();
-
+            getSupportActionBar().setTitle("Genres");
         } else if (id == R.id.nav_playlist) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.main_frame,new FragmentPlaylists(),"FRAGMENT_PLAYLIST");
-            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Playlist");
 
         } else if (id == R.id.nav_favourite) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.main_frame,new FragmentFavourites(),"FRAGMENT_FAVOURITES");
-            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Favourites");
 
         } else if (id == R.id.nav_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
-
+            
         } else if (id == R.id.nav_about) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("☻☻☻ Music Player v1.0 ☻☻☻");
@@ -216,6 +206,8 @@ public class MainActivity extends AppCompatActivity
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
         }
+
+        fragmentTransaction.commit(); // save the changes
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

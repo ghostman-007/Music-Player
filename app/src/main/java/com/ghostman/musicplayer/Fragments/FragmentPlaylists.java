@@ -274,16 +274,17 @@ public class FragmentPlaylists extends Fragment {
                                 Functions.listOfPlaylists(getActivity().getApplicationContext(),new_pl_name.getText().toString(),"rename");
 
                                 //Reload current fragment
-                                /*Fragment fragment = getActivity().getSupportFragmentManager().findFragmentByTag("Fragment Playlist");
+                                Fragment fragment = getActivity().getSupportFragmentManager().findFragmentByTag("FRAGMENT_PLAYLIST");
                                 final FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                                fragmentTransaction.detach(fragment);
-                                fragmentTransaction.attach(fragment);
-                                fragmentTransaction.commit();*/
+                                fragmentTransaction.replace(R.id.main_frame, fragment);
+                                //fragmentTransaction.attach(fragment);
+                                fragmentTransaction.commit();
 
-                                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                                /*FragmentManager fragmentManager = getActivity().getSupportFragmentManager().findFragmentByTag("FRAGMENT_PLAYLIST");
                                 fragmentManager.beginTransaction()
                                         .replace(R.id.main_frame, new FragmentPlaylists())
                                         .commit();
+                                */
                             }
                         });
                         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

@@ -89,7 +89,8 @@ public class FragmentSongsLayout extends Fragment {
         //if(id == android.R.id.home) {   }
 
         if (id == R.id.pl_add_songs) {
-            PlayerConstants.CURRENT_PLAYLIST_SONGS = Functions.listOfPlaylistSongs(getActivity().getApplicationContext(), PlayerConstants.CURRENT_PLAYLIST_ID);
+            PlayerConstants.CURRENT_PLAYLIST_SONGS = Functions.listOfPlaylistSongs(getActivity().getApplicationContext(),
+                    PlayerConstants.CURRENT_PLAYLIST_ID);
 
             Intent intent = new Intent(this.getContext(), AddListSongs.class);
             startActivity(intent);
@@ -108,11 +109,7 @@ public class FragmentSongsLayout extends Fragment {
             public void onItemClick(View view, int position){
                 PlayerConstants.SONG_PAUSED = false;
 
-                //PlayerConstants.CURRENT_SONGS_LIST = PlayerConstants.ALBUMS_SONG_LIST;
-                //PlayerConstants.CURRENT_SONG_ID = PlayerConstants.CURRENT_SONGS_LIST.get(position).getSong_id();
                 PlayerConstants.CURRENT_SONG_ID = PlayerConstants.ALBUMS_SONG_LIST.get(position).getSong_id();
-
-                //PlayerConstants.CURRENT_SONG_NUMBER = position;
 
                 if(PlayerConstants.PLAYLIST_ADD_SONGS)
                     PlayerConstants.FAVOURITES_FRAG = false;

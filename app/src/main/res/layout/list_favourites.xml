@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="1dp"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@color/colorContent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8.5"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSongName_listfavourites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Song Name"
+                android:textSize="17sp"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvArtistName_listfavourites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8.5"
+                android:textColor="@android:color/darker_gray"
+                android:text="Artist Name" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDuration_listfavourites"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/darker_gray"
+            android:text="Duration" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

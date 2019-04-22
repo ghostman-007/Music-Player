@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ghostman.musicplayer">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EditSongInfo"
+            android:label="@string/edit_song_info"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Settings.SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SongQueue"
+            android:label="Song Queue"
+            android:parentActivityName=".MainActivity" />
+
+        <service
+            android:name=".PlayerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".NotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.ghostman.musicplayer.pause" />
+                <action android:name="com.ghostman.musicplayer.next" />
+                <action android:name="com.ghostman.musicplayer.play" />
+                <action android:name="com.ghostman.musicplayer.previous" />
+                <action android:name="com.ghostman.musicplayer.exit" />
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".AddListSongs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+    </application>
+
+</manifest>

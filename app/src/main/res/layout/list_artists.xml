@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="1dp"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorContent">
+
+        <TextView
+            android:id="@+id/tvArtistName_listArtists"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/text_margin"
+            android:fontFamily="serif"
+            android:text="Artist Name"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            android:background="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

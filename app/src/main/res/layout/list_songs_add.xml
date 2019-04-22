@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal"
+    android:paddingBottom="1.0dp"
+    android:scrollbarStyle="outsideOverlay">
+
+    <LinearLayout
+        android:id="@+id/pl_add_list_item_background"
+        android:layout_width="0dp"
+        android:layout_weight="8.7"
+        android:paddingStart="10dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/pl_add_song_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Songs Name"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/pl_add_artist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="10dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Artist name"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="?android:attr/colorButtonNormal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1.8"
+        android:layout_height="match_parent"
+        android:paddingStart="10dp"
+        android:background="@color/colorPrimaryDark">
+
+        <CheckBox
+            android:id="@+id/pl_add_list_song_cb"
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+-->
+
+</LinearLayout>

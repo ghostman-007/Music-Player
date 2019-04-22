@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/mi_shuffle_songQueueMenu"
+        android:icon="@drawable/ic_shuffle_24px"
+        android:iconTint="@android:color/white"
+        android:title="Shuffle"
+        android:orderInCategory="2"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mi_savePlaylist_songQueueMenu"
+        android:icon="@drawable/ic_playlist_add_24px"
+        android:iconTint="@android:color/white"
+        android:title="Add"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+
+</menu>

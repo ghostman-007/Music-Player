@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_songs"
+            android:icon="@drawable/ic_songs_24px"
+            android:title="@string/menu_songs" />
+        <item
+            android:id="@+id/nav_albums"
+            android:icon="@drawable/ic_album_24px"
+            android:title="@string/menu_albums" />
+        <item
+            android:id="@+id/nav_artist"
+            android:icon="@drawable/ic_artist_24px"
+            android:title="@string/menu_artists" />
+        <item
+            android:id="@+id/nav_genre"
+            android:icon="@drawable/ic_genre_24px"
+            android:title="@string/menu_genres" />
+        <item
+            android:id="@+id/nav_playlist"
+            android:icon="@drawable/ic_playlist_play_24px"
+            android:title="@string/menu_playlist" />
+        <item
+            android:id="@+id/nav_favourite"
+            android:icon="@drawable/ic_favorite_24px"
+            android:title="@string/menu_favourites" />
+    </group>
+
+    <group android:id="@+id/main_drawer_group2" android:menuCategory="alternative">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_24px"
+            android:title="@string/menu_settings" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_about" />
+    </group>
+
+
+</menu>
